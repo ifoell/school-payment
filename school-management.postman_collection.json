@@ -1,0 +1,2788 @@
+{
+	"info": {
+		"_postman_id": "bffe694f-3905-4ac6-999a-717590419f13",
+		"name": "school-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3012865"
+	},
+	"item": [
+		{
+			"name": "school-management",
+			"item": [
+				{
+					"name": "teacher",
+					"item": [
+						{
+							"name": "get all teachers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/teacher",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"teacher"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all teachers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/teacher",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"teacher"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 04:17:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-14 15:28:12\",\n        \"name\": \"Supardi Al Farisi\",\n        \"subjects\": [],\n        \"gender\": \"Male\",\n        \"uniqueNumber\": \"626628881782\",\n        \"entryYear\": 2020\n    },\n    {\n        \"id\": 3,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 11:05:09\",\n        \"name\": \"Gozy Faruq\",\n        \"subjects\": [],\n        \"gender\": \"Male\",\n        \"uniqueNumber\": \"626628881783\",\n        \"entryYear\": 2020\n    },\n    {\n        \"id\": 4,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 11:12:43\",\n        \"name\": \"Gozy Al Faruq\",\n        \"subjects\": [\n            {\n                \"id\": 2,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-14 17:28:43\",\n                \"name\": \"Bahasa Indonesia 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Senin\"\n            },\n            {\n                \"id\": 5,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 11:03:44\",\n                \"name\": \"IPS 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Selasa\"\n            }\n        ],\n        \"gender\": \"Male\",\n        \"uniqueNumber\": \"626628881783\",\n        \"entryYear\": 2020\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add teacher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Abdurrahim Al Mubarak\",\r\n  \"subjects\": [1, 4],\r\n  \"gender\": \"Male\",\r\n  \"uniqueNumber\": \"626628881785\",\r\n  \"entryYear\": 2020\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/teacher",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"teacher"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add teacher",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Abdurrahim Al Mubarak\",\r\n  \"subjects\": [1, 4],\r\n  \"gender\": \"Male\",\r\n  \"uniqueNumber\": \"626628881785\",\r\n  \"entryYear\": 2020\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/teacher",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"teacher"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 04:18:55 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 5,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 11:18:55\",\n    \"name\": \"Abdurrahim Al Mubarak\",\n    \"subjects\": [\n        {\n            \"id\": 1,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-14 17:29:34\",\n            \"name\": \"Matematika 1\",\n            \"classId\": 1,\n            \"scheduleDay\": \"Senin\"\n        },\n        {\n            \"id\": 4,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-15 11:03:32\",\n            \"name\": \"IPA 1\",\n            \"classId\": 1,\n            \"scheduleDay\": \"Senin\"\n        }\n    ],\n    \"gender\": \"Male\",\n    \"uniqueNumber\": \"626628881785\",\n    \"entryYear\": 2020\n}"
+								}
+							]
+						},
+						{
+							"name": "get teacher by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/teacher/4",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"teacher",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get teacher by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/teacher/4",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"teacher",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 04:17:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 11:12:43\",\n    \"name\": \"Gozy Al Faruq\",\n    \"subjects\": [\n        {\n            \"id\": 5,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-15 11:03:44\",\n            \"name\": \"IPS 1\",\n            \"classId\": 1,\n            \"scheduleDay\": \"Selasa\"\n        },\n        {\n            \"id\": 2,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-14 17:28:43\",\n            \"name\": \"Bahasa Indonesia 1\",\n            \"classId\": 1,\n            \"scheduleDay\": \"Senin\"\n        }\n    ],\n    \"gender\": \"Male\",\n    \"uniqueNumber\": \"626628881783\",\n    \"entryYear\": 2020\n}"
+								}
+							]
+						},
+						{
+							"name": "update teacher",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Supardi Al Farisi\",\r\n    \"subjects\": [1,4],\r\n    \"gender\": \"Male\",\r\n    \"uniqueNumber\": \"626628881782\",\r\n    \"entryYear\": 2020\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/teacher/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"teacher",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update teacher",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Supardi Al Farisi\",\r\n    \"subjects\": [1,4],\r\n    \"gender\": \"Male\",\r\n    \"uniqueNumber\": \"626628881782\",\r\n    \"entryYear\": 2020\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/teacher/1",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"teacher",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 04:22:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 11:22:41\",\n    \"name\": \"Supardi Al Farisi\",\n    \"subjects\": [\n        {\n            \"id\": 1,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-14 17:29:34\",\n            \"name\": \"Matematika 1\",\n            \"classId\": 1,\n            \"scheduleDay\": \"Senin\"\n        },\n        {\n            \"id\": 4,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-15 11:03:32\",\n            \"name\": \"IPA 1\",\n            \"classId\": 1,\n            \"scheduleDay\": \"Senin\"\n        }\n    ],\n    \"gender\": \"Male\",\n    \"uniqueNumber\": \"626628881782\",\n    \"entryYear\": 2020\n}"
+								}
+							]
+						},
+						{
+							"name": "delete teacher",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/teacher/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"teacher",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete teacher",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/teacher/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"teacher",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "39"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Jul 2024 09:55:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "Teacher with id: 2 deleted successfully"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "classes",
+					"item": [
+						{
+							"name": "get all classes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/class",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"class"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all classes",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/class",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"class"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 05:02:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 11:53:16\",\n        \"name\": \"10A\",\n        \"homeroomT\": {\n            \"id\": 1,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-15 11:22:41\",\n            \"name\": \"Supardi Al Farisi\",\n            \"subjects\": [\n                {\n                    \"id\": 1,\n                    \"updatedBy\": null,\n                    \"updatedOn\": \"2024-07-14 17:29:34\",\n                    \"name\": \"Matematika 1\",\n                    \"classId\": 1,\n                    \"scheduleDay\": \"Senin\"\n                },\n                {\n                    \"id\": 4,\n                    \"updatedBy\": null,\n                    \"updatedOn\": \"2024-07-15 11:03:32\",\n                    \"name\": \"IPA 1\",\n                    \"classId\": 1,\n                    \"scheduleDay\": \"Senin\"\n                }\n            ],\n            \"gender\": \"Male\",\n            \"uniqueNumber\": \"626628881782\",\n            \"entryYear\": 2020\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add class",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"10B\",\r\n  \"homeroomTId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/class",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"class"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add class",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"10A\",\r\n  \"homeroomTId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/class",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"class"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 04:53:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 11:53:16\",\n    \"name\": \"10A\",\n    \"homeroomT\": {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 11:22:41\",\n        \"name\": \"Supardi Al Farisi\",\n        \"subjects\": [\n            {\n                \"id\": 1,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-14 17:29:34\",\n                \"name\": \"Matematika 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Senin\"\n            },\n            {\n                \"id\": 4,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 11:03:32\",\n                \"name\": \"IPA 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Senin\"\n            }\n        ],\n        \"gender\": \"Male\",\n        \"uniqueNumber\": \"626628881782\",\n        \"entryYear\": 2020\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "get class by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/class/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"class",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get class by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/class/1",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"class",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 05:06:06 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 11:53:16\",\n    \"name\": \"10A\",\n    \"homeroomT\": {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 11:22:41\",\n        \"name\": \"Supardi Al Farisi\",\n        \"subjects\": [\n            {\n                \"id\": 1,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-14 17:29:34\",\n                \"name\": \"Matematika 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Senin\"\n            },\n            {\n                \"id\": 4,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 11:03:32\",\n                \"name\": \"IPA 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Senin\"\n            }\n        ],\n        \"gender\": \"Male\",\n        \"uniqueNumber\": \"626628881782\",\n        \"entryYear\": 2020\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update class",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"10B\",\r\n    \"homeroomTId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/class/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"class",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update class",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"10B\",\r\n    \"homeroomTId\": 4\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/class/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"class",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 05:07:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 12:07:21\",\n    \"name\": \"10B\",\n    \"homeroomT\": {\n        \"id\": 4,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 11:12:43\",\n        \"name\": \"Gozy Al Faruq\",\n        \"subjects\": [\n            {\n                \"id\": 5,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 11:03:44\",\n                \"name\": \"IPS 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Selasa\"\n            },\n            {\n                \"id\": 2,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-14 17:28:43\",\n                \"name\": \"Bahasa Indonesia 1\",\n                \"classId\": 1,\n                \"scheduleDay\": \"Senin\"\n            }\n        ],\n        \"gender\": \"Male\",\n        \"uniqueNumber\": \"626628881783\",\n        \"entryYear\": 2020\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete class",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/class/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"class",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete class",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/class/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"class",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "37"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 05:07:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "Class with id: 2 deleted successfully"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "school",
+					"item": [
+						{
+							"name": "add school",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"SMP Al Furuqi\",\r\n  \"address\": \"Jl. Kemang Raya Utara, Kec. Kemang, Kab. Kembang, Jawa Utara\",\r\n  \"nss\": \"1234567878\",\r\n  \"npsn\": \"1112223334\",\r\n  \"phone\": \"877478\",\r\n  \"email\": \"info@alfuruqi.sch.id\",\r\n  \"website\": \"alfuruqi.sch.id\",\r\n  \"accredited\": \"B\",\r\n  \"accrYear\": 2021\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/school",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"school"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add school",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"SMP Al Furuqi\",\r\n  \"address\": \"Jl. Kemang Raya Utara, Kec. Kemang, Kab. Kembang, Jawa Utara\",\r\n  \"nss\": \"1234567878\",\r\n  \"npsn\": \"1112223334\",\r\n  \"phone\": \"877478\",\r\n  \"email\": \"info@alfuruqi.sch.id\",\r\n  \"website\": \"alfuruqi.sch.id\",\r\n  \"accredited\": \"B\",\r\n  \"accrYear\": 2021\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/school",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"school"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 03:23:04 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 10:23:04\",\n    \"name\": \"SMP Al Furuqi\",\n    \"address\": \"Jl. Kemang Raya Utara, Kec. Kemang, Kab. Kembang, Jawa Utara\",\n    \"nss\": \"1234567878\",\n    \"npsn\": \"1112223334\",\n    \"phone\": \"877478\",\n    \"email\": \"info@alfuruqi.sch.id\",\n    \"website\": \"alfuruqi.sch.id\",\n    \"accredited\": \"B\",\n    \"accrYear\": 2021\n}"
+								}
+							]
+						},
+						{
+							"name": "get school by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/school/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"school",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get school by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/school/1",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"school",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 03:23:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 10:23:04\",\n    \"name\": \"SMP Al Furuqi\",\n    \"address\": \"Jl. Kemang Raya Utara, Kec. Kemang, Kab. Kembang, Jawa Utara\",\n    \"nss\": \"1234567878\",\n    \"npsn\": \"1112223334\",\n    \"phone\": \"877478\",\n    \"email\": \"info@alfuruqi.sch.id\",\n    \"website\": \"alfuruqi.sch.id\",\n    \"accredited\": \"B\",\n    \"accrYear\": 2021\n}"
+								}
+							]
+						},
+						{
+							"name": "update school",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"SMP Al Furuqi\",\r\n  \"address\": \"Jl. Kemang Raya Utara No. 29, Kec. Kemang, Kab. Kembang, Jawa Utara\",\r\n  \"nss\": \"1234567878\",\r\n  \"npsn\": \"1112223334\",\r\n  \"phone\": \"877478\",\r\n  \"email\": \"info@alfuruqi.sch.id\",\r\n  \"website\": \"alfuruqi.sch.id\",\r\n  \"accredited\": \"B\",\r\n  \"accrYear\": 2021\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/school/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"school",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update school",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"SMP Al Furuqi\",\r\n  \"address\": \"Jl. Kemang Raya Utara No. 29, Kec. Kemang, Kab. Kembang, Jawa Utara\",\r\n  \"nss\": \"1234567878\",\r\n  \"npsn\": \"1112223334\",\r\n  \"phone\": \"877478\",\r\n  \"email\": \"info@alfuruqi.sch.id\",\r\n  \"website\": \"alfuruqi.sch.id\",\r\n  \"accredited\": \"B\",\r\n  \"accrYear\": 2021\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/school/1",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"school",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 03:24:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 10:24:09\",\n    \"name\": \"SMP Al Furuqi\",\n    \"address\": \"Jl. Kemang Raya Utara No. 29, Kec. Kemang, Kab. Kembang, Jawa Utara\",\n    \"nss\": \"1234567878\",\n    \"npsn\": \"1112223334\",\n    \"phone\": \"877478\",\n    \"email\": \"info@alfuruqi.sch.id\",\n    \"website\": \"alfuruqi.sch.id\",\n    \"accredited\": \"B\",\n    \"accrYear\": 2021\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "subject",
+					"item": [
+						{
+							"name": "get all subjects",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/subject",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"subject"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all subjects",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/subject",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"subject"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Jul 2024 10:30:19 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-14 17:29:34\",\n        \"name\": \"Matematika 1\",\n        \"classId\": 1,\n        \"scheduleDay\": \"Senin\"\n    },\n    {\n        \"id\": 2,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-14 17:28:43\",\n        \"name\": \"Bahasa Indonesia 1\",\n        \"classId\": 1,\n        \"scheduleDay\": \"Senin\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add subject",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"IPS 1\",\r\n  \"classId\": 1,\r\n  \"scheduleDay\": \"Selasa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/subject",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"subject"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add subject",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Matematika\",\r\n  \"classId\": 1,\r\n  \"scheduleDay\": \"Senin\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/subject",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"subject"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Jul 2024 10:29:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-14 17:29:50\",\n    \"name\": \"Matematika\",\n    \"classId\": 1,\n    \"scheduleDay\": \"Senin\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get subject by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/subject/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"subject",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get subject by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/subject/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"subject",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Jul 2024 10:29:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-14 17:28:43\",\n    \"name\": \"Bahasa Indonesia 1\",\n    \"classId\": 1,\n    \"scheduleDay\": \"Senin\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update subject",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Matematika 1\",\r\n  \"classId\": 1,\r\n  \"scheduleDay\": \"Senin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/subject/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"subject",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update subject",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Matematika 1\",\r\n  \"classId\": 1,\r\n  \"scheduleDay\": \"Senin\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/subject/1",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"subject",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Jul 2024 10:29:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-14 17:29:34\",\n    \"name\": \"Matematika 1\",\n    \"classId\": 1,\n    \"scheduleDay\": \"Senin\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete subject",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/subject/3",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"subject",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete subject",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/subject/3",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"subject",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "39"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 14 Jul 2024 10:30:13 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "Subject with id: 3 deleted successfully"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "student",
+					"item": [
+						{
+							"name": "get all students",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/student",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"student"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all students",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/student",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"student"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:09:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 15:09:10\",\n        \"name\": \"Rohimun Karim\",\n        \"natSIdNumber\": \"8288829918\",\n        \"gender\": \"Male\",\n        \"address\": \"Jl.\",\n        \"classId\": 1,\n        \"status\": \"A\",\n        \"entryYear\": 2020,\n        \"parentsId\": 1,\n        \"sidNumber\": \"202006001\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Rohimun Karim\",\r\n    \"sidNumber\": \"202006001\",\r\n    \"natSIdNumber\": \"8288829918\",\r\n    \"gender\": \"Male\",\r\n    \"address\": \"Jl.\",\r\n    \"classId\": 1,\r\n    \"status\": \"A\",\r\n    \"entryYear\": 2020,\r\n    \"parentsId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/student",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"student"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n          \"name\" : \"Rohimun Karim\",\r\n          \"sIdNumber\" : \"202006001\",\r\n          \"natSIdNumber\" : \"8288829918\",\r\n          \"gender\" : \"Male\",\r\n          \"address\" : \"Jl.\",\r\n          \"classId\" : 1,\r\n          \"status\" : \"A\",\r\n          \"entryYear\" : 2020,\r\n          \"parentsId\" : 1\r\n        }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/student",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"student"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:07:19 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:07:19\",\n    \"name\": \"Rohimun Karim\",\n    \"natSIdNumber\": \"8288829918\",\n    \"gender\": \"Male\",\n    \"address\": \"Jl.\",\n    \"classId\": 1,\n    \"status\": \"A\",\n    \"entryYear\": 2020,\n    \"parentsId\": 1,\n    \"sidNumber\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "get student by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/student/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"student",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get student by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/student/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"student",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:08:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:07:54\",\n    \"name\": \"Abdul Karim Al Munir\",\n    \"natSIdNumber\": \"8288829920\",\n    \"gender\": \"Male\",\n    \"address\": \"Jl.\",\n    \"classId\": 1,\n    \"status\": \"A\",\n    \"entryYear\": 2020,\n    \"parentsId\": 2,\n    \"sidNumber\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "update student",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Rohimun Karim\",\r\n    \"sidNumber\": \"202006001\",\r\n    \"natSIdNumber\": \"8288829918\",\r\n    \"gender\": \"Male\",\r\n    \"address\": \"Jl.\",\r\n    \"classId\": 1,\r\n    \"status\": \"A\",\r\n    \"entryYear\": 2020,\r\n    \"parentsId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/student/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"student",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update student",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Rohimun Karim\",\r\n    \"sidNumber\": \"202006001\",\r\n    \"natSIdNumber\": \"8288829918\",\r\n    \"gender\": \"Male\",\r\n    \"address\": \"Jl.\",\r\n    \"classId\": 1,\r\n    \"status\": \"A\",\r\n    \"entryYear\": 2020,\r\n    \"parentsId\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/student/1",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"student",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:09:10 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:09:10\",\n    \"name\": \"Rohimun Karim\",\n    \"natSIdNumber\": \"8288829918\",\n    \"gender\": \"Male\",\n    \"address\": \"Jl.\",\n    \"classId\": 1,\n    \"status\": \"A\",\n    \"entryYear\": 2020,\n    \"parentsId\": 1,\n    \"sidNumber\": \"202006001\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete student",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/student/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"student",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete student",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/student/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"student",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "39"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:09:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "Student with id: 2 deleted successfully"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "parents",
+					"item": [
+						{
+							"name": "get all parents",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/parents",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"parents"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all parents",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/parents",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"parents"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:16:33 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 15:16:19\",\n        \"name\": \"Rohman Ahmad Syafi\",\n        \"gender\": \"Male\",\n        \"address\": \"Jl. \",\n        \"occupation\": \"Karyawan\",\n        \"status\": \"Parents\",\n        \"isAlive\": \"Y\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add parents",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Rohman Ahmad Syafi\",\r\n    \"gender\": \"Male\",\r\n    \"address\": \"Jl. \",\r\n    \"occupation\": \"Karyawan\",\r\n    \"status\": \"Parents\",\r\n    \"isAlive\": \"Y\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/parents",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"parents"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add parents",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Rohman Ahmad Syafi\",\r\n    \"gender\": \"Male\",\r\n    \"address\": \"Jl. \",\r\n    \"occupation\": \"Karyawan\",\r\n    \"status\": \"Parents\",\r\n    \"isAlive\": \"Y\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/parents",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"parents"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:16:20 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:16:19\",\n    \"name\": \"Rohman Ahmad Syafi\",\n    \"gender\": \"Male\",\n    \"address\": \"Jl. \",\n    \"occupation\": \"Karyawan\",\n    \"status\": \"Parents\",\n    \"isAlive\": \"Y\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get parents by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/parents/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"parents",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get parents by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/parents/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"parents",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:17:14 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:16:48\",\n    \"name\": \"Rohman Ahmad Syafi\",\n    \"gender\": \"Male\",\n    \"address\": \"Jl. \",\n    \"occupation\": \"Karyawan\",\n    \"status\": \"Parents\",\n    \"isAlive\": \"Y\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update parents",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ahmad  Mabruk\",\r\n    \"gender\": \"Male\",\r\n    \"address\": \"Jl. \",\r\n    \"occupation\": \"Karyawan\",\r\n    \"status\": \"Parents\",\r\n    \"isAlive\": \"Y\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/parents/1",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"parents",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update parents",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Ahmad  Mabruk\",\r\n    \"gender\": \"Male\",\r\n    \"address\": \"Jl. \",\r\n    \"occupation\": \"Karyawan\",\r\n    \"status\": \"Parents\",\r\n    \"isAlive\": \"Y\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/parents/1",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"parents",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:17:58 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:17:58\",\n    \"name\": \"Ahmad  Mabruk\",\n    \"gender\": \"Male\",\n    \"address\": \"Jl. \",\n    \"occupation\": \"Karyawan\",\n    \"status\": \"Parents\",\n    \"isAlive\": \"Y\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete parents",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/parents/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"parents",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete parents",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/parents/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"parents",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "38"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:18:11 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "Parent with id: 2 deleted successfully"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "payment-type",
+					"item": [
+						{
+							"name": "get all payment-type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8293/payment-type",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8293",
+									"path": [
+										"payment-type"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all payment-type",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8293/payment-type",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8293",
+											"path": [
+												"payment-type"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:47:47 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 15:20:29\",\n        \"name\": \"Uang Pendaftaran\",\n        \"description\": \"Bayar Pendaftaran\",\n        \"nominal\": 100000\n    },\n    {\n        \"id\": 2,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 15:37:37\",\n        \"name\": \"Uang Gedung\",\n        \"description\": \"Bayar Uang Gedung\",\n        \"nominal\": 500000\n    },\n    {\n        \"id\": 3,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 15:39:34\",\n        \"name\": \"SPP\",\n        \"description\": \"Bayar SPP\",\n        \"nominal\": 50000\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add payment-type",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"SPP\",\r\n    \"description\": \"Bayar SPP\",\r\n    \"nominal\": 500000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/payment-type",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"payment-type"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add payment-type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"SPP\",\r\n    \"description\": \"Bayar SPP\",\r\n    \"nominal\": 500000\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/payment-type",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"payment-type"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:37:47 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:37:47\",\n    \"name\": \"SPP\",\n    \"description\": \"Bayar SPP\",\n    \"nominal\": 500000\n}"
+								}
+							]
+						},
+						{
+							"name": "get payment-type by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/payment-type/2",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"payment-type",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get payment-type by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/payment-type/2",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"payment-type",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:39:14 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:37:37\",\n    \"name\": \"Uang Gedung\",\n    \"description\": \"Bayar Uang Gedung\",\n    \"nominal\": 500000\n}"
+								}
+							]
+						},
+						{
+							"name": "update payment-type",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"SPP\",\r\n    \"description\": \"Bayar SPP\",\r\n    \"nominal\": 50000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8292/payment-type/3",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"payment-type",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update payment-type",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"SPP\",\r\n    \"description\": \"Bayar SPP\",\r\n    \"nominal\": 50000\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8292/payment-type/3",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"payment-type",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:39:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"updatedBy\": null,\n    \"updatedOn\": \"2024-07-15 15:39:34\",\n    \"name\": \"SPP\",\n    \"description\": \"Bayar SPP\",\n    \"nominal\": 50000\n}"
+								}
+							]
+						},
+						{
+							"name": "delete payment-type",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8292/payment-type/4",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8292",
+									"path": [
+										"payment-type",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete payment-type",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8292/payment-type/4",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8292",
+											"path": [
+												"payment-type",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "44"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 08:39:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "Payment type with id: 4 deleted successfully"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "payment",
+					"item": [
+						{
+							"name": "get all payment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8293/payment",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8293",
+									"path": [
+										"payment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all payment",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8293/payment",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8293",
+											"path": [
+												"payment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 14:30:33 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"studentId\": 1,\n        \"studentName\": \"Rohimun Karim\",\n        \"studentSchoolId\": \"8288829918\",\n        \"paymentId\": 5,\n        \"paymentAmount\": 500000,\n        \"paymentStatus\": 1,\n        \"paymentDate\": \"2024-07-15T21:27:39\"\n    },\n    {\n        \"studentId\": 1,\n        \"studentName\": \"Rohimun Karim\",\n        \"studentSchoolId\": \"8288829918\",\n        \"paymentId\": 6,\n        \"paymentAmount\": 500000,\n        \"paymentStatus\": 1,\n        \"paymentDate\": \"2024-07-15T21:29:41\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"student\": 1,\r\n  \"payment\": {\r\n    \"paymentType\": 1,\r\n    \"nominal\": 500000,\r\n    \"status\": 1\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8293/payment",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8293",
+									"path": [
+										"payment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add payment",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"student\": 1,\r\n  \"payment\": {\r\n    \"paymentType\": 1,\r\n    \"nominal\": 500000,\r\n    \"status\": 1\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8293/payment",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8293",
+											"path": [
+												"payment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 14:29:42 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"student\": {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 15:09:10\",\n        \"name\": \"Rohimun Karim\",\n        \"natSIdNumber\": \"8288829918\",\n        \"gender\": \"Male\",\n        \"address\": \"Jl.\",\n        \"classId\": 1,\n        \"status\": \"A\",\n        \"entryYear\": 2020,\n        \"parentsId\": 1,\n        \"payments\": [\n            {\n                \"id\": 5,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 21:27:39\",\n                \"paymentType\": {\n                    \"id\": 1,\n                    \"updatedBy\": null,\n                    \"updatedOn\": \"2024-07-15 15:20:29\",\n                    \"name\": \"Uang Pendaftaran\",\n                    \"description\": \"Bayar Pendaftaran\",\n                    \"nominal\": 100000\n                },\n                \"nominal\": 500000,\n                \"status\": 1,\n                \"paymentDate\": \"2024-07-15T21:27:39Z\"\n            },\n            {\n                \"id\": 6,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 21:29:41\",\n                \"paymentType\": {\n                    \"id\": 1,\n                    \"updatedBy\": null,\n                    \"updatedOn\": \"2024-07-15 15:20:29\",\n                    \"name\": \"Uang Pendaftaran\",\n                    \"description\": \"Bayar Pendaftaran\",\n                    \"nominal\": 100000\n                },\n                \"nominal\": 500000,\n                \"status\": 1,\n                \"paymentDate\": \"2024-07-15T21:29:41.9810738Z\"\n            }\n        ],\n        \"sidNumber\": \"202006001\"\n    },\n    \"studentRegistId\": null,\n    \"payment\": {\n        \"id\": 6,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 21:29:41\",\n        \"paymentType\": {\n            \"id\": 1,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-15 15:20:29\",\n            \"name\": \"Uang Pendaftaran\",\n            \"description\": \"Bayar Pendaftaran\",\n            \"nominal\": 100000\n        },\n        \"nominal\": 500000,\n        \"status\": 1,\n        \"paymentDate\": \"2024-07-15T21:29:41.9810738Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "get payment by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8293/payment/3",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8293",
+									"path": [
+										"payment",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get payment by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8293/payment/3",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8293",
+											"path": [
+												"payment",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 14:31:25 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"studentId\": 1,\n    \"studentName\": \"Rohimun Karim\",\n    \"studentSchoolId\": \"8288829918\",\n    \"paymentId\": 5,\n    \"paymentAmount\": 500000,\n    \"paymentStatus\": 1,\n    \"paymentDate\": \"2024-07-15T21:27:39\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update payment",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"student\": 1,\r\n  \"payment\": {\r\n    \"paymentType\": 2,\r\n    \"nominal\": 500000,\r\n    \"status\": 1\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}:8293/payment/3",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8293",
+									"path": [
+										"payment",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update payment",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"student\": 1,\r\n  \"payment\": {\r\n    \"paymentType\": 2,\r\n    \"nominal\": 500000,\r\n    \"status\": 1\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{server}}:8293/payment/3",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8293",
+											"path": [
+												"payment",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 14:34:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"student\": {\n        \"id\": 1,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 15:09:10\",\n        \"name\": \"Rohimun Karim\",\n        \"natSIdNumber\": \"8288829918\",\n        \"gender\": \"Male\",\n        \"address\": \"Jl.\",\n        \"classId\": 1,\n        \"status\": \"A\",\n        \"entryYear\": 2020,\n        \"parentsId\": 1,\n        \"payments\": [\n            {\n                \"id\": 6,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 21:29:41\",\n                \"paymentType\": {\n                    \"id\": 1,\n                    \"updatedBy\": null,\n                    \"updatedOn\": \"2024-07-15 15:20:29\",\n                    \"name\": \"Uang Pendaftaran\",\n                    \"description\": \"Bayar Pendaftaran\",\n                    \"nominal\": 100000,\n                    \"hibernateLazyInitializer\": {}\n                },\n                \"nominal\": 500000,\n                \"status\": 1,\n                \"paymentDate\": \"2024-07-15T21:29:41Z\"\n            },\n            {\n                \"id\": 5,\n                \"updatedBy\": null,\n                \"updatedOn\": \"2024-07-15 21:34:34\",\n                \"paymentType\": {\n                    \"id\": 2,\n                    \"updatedBy\": null,\n                    \"updatedOn\": \"2024-07-15 15:37:37\",\n                    \"name\": \"Uang Gedung\",\n                    \"description\": \"Bayar Uang Gedung\",\n                    \"nominal\": 500000\n                },\n                \"nominal\": 500000,\n                \"status\": 1,\n                \"paymentDate\": \"2024-07-15T21:34:34.7796497Z\",\n                \"hibernateLazyInitializer\": {}\n            }\n        ],\n        \"sidNumber\": \"202006001\",\n        \"hibernateLazyInitializer\": {}\n    },\n    \"studentRegistId\": null,\n    \"payment\": {\n        \"id\": 5,\n        \"updatedBy\": null,\n        \"updatedOn\": \"2024-07-15 21:34:34\",\n        \"paymentType\": {\n            \"id\": 2,\n            \"updatedBy\": null,\n            \"updatedOn\": \"2024-07-15 15:37:37\",\n            \"name\": \"Uang Gedung\",\n            \"description\": \"Bayar Uang Gedung\",\n            \"nominal\": 500000\n        },\n        \"nominal\": 500000,\n        \"status\": 1,\n        \"paymentDate\": \"2024-07-15T21:34:34.7796497Z\",\n        \"hibernateLazyInitializer\": {}\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete payment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server}}:8293/payment/5",
+									"host": [
+										"{{server}}"
+									],
+									"port": "8293",
+									"path": [
+										"payment",
+										"5"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete payment",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{server}}:8293/payment/5",
+											"host": [
+												"{{server}}"
+											],
+											"port": "8293",
+											"path": [
+												"payment",
+												"5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "47"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 15 Jul 2024 14:35:35 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "Student payment with id: 5 deleted successfully"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
